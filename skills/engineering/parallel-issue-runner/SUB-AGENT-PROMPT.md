@@ -13,10 +13,7 @@ Do NOT create a pull request. Merge directly to {base_branch} by pushing with th
 
 ## Step 2 — Test-Driven Implementation
 
-- Write failing tests against the interfaces specified in the brief. Test behaviors at boundaries (e.g. Services, Ports), not internal implementation details.
-- Run the tests to confirm they fail (RED).
-- Implement the requested features until all tests pass (GREEN).
-- Refactor if needed, keeping tests green.
+Use the `/idd:tdd` skill to drive the implementation. Test behaviors at the boundaries defined in the Agent Brief, not internal implementation details.
 
 ## Step 3 — Verify Acceptance Criteria
 
