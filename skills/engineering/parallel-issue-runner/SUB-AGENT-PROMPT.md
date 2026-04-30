@@ -21,7 +21,7 @@ After all tests pass, merge your branch to {base_branch} with a retry loop (max 
 
 If merge succeeds:
 1. Get the merge commit SHA: `git rev-parse --short HEAD`
-2. Get test results summary: `hatch run test` (capture pass/skip/fail counts)
+2. Get test results summary by running the project's test command (capture pass/skip/fail counts)
 3. Comment on the issue:
    ```
    gh issue comment {number} --body "### Test Results

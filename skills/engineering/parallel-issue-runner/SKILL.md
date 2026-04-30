@@ -129,10 +129,7 @@ For each agent signal received:
   ```
   Decide whether to retry, rebase manually, or defer the issue.
 
-After all agents in the batch complete (or fail), verify full test suite:
-```bash
-hatch run check
-```
+After all agents in the batch complete (or fail), verify the full test suite using the project's test command (e.g. `npm test`, `pytest`, `cargo test` — whatever the project uses).
 
 **LOOP** back to Step 1.
 
@@ -142,7 +139,7 @@ When all child issues are CLOSED:
 
 1. Re-read PRD acceptance criteria
 2. Confirm each criterion maps to a closed issue or commit
-3. Run full test suite: `hatch run check`
+3. Run the project's full test suite and confirm everything passes.
 4. Close:
    ```bash
    gh issue close {prd_number} --comment "All child issues resolved. PRD acceptance criteria met."

@@ -61,7 +61,7 @@ The core idea is a **repeating feature loop** driven by chained skills. Each ski
   │       │  │    /idd:implement-issue → /idd:tdd            │  │
   │       │  │    → test → rebase → push → close issue       │  │
   │       │  │    ↓                                          │  │
-  │       │  │  hatch run check (full suite)                 │  │
+  │       │  │  run project test suite (full)                │  │
   │       │  │    ↓                                          │  │
   │       │  └─── LOOP BACK ───────────────────────────────-─┘  │
   │       │                                                     │
