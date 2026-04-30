@@ -131,9 +131,9 @@ For each agent signal received:
 
 After all agents in the batch complete (or fail):
 
-1. Clean up stale worktrees:
+1. Clean up only the worktrees created in this batch (use the paths returned by the Agent tool):
    ```bash
-   git worktree prune
+   git worktree remove --force <worktree-path>  # repeat for each agent in this batch
    ```
 
 2. Verify the full test suite using the project's test command (e.g. `npm test`, `pytest`, `cargo test` — whatever the project uses).
