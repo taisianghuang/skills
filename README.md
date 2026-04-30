@@ -57,8 +57,9 @@ The core idea is a **repeating feature loop** driven by chained skills. Each ski
   │       │  │  Conflict detection → defer conflicts         │  │
   │       │  │    ↓                                          │  │
   │       │  │  Launch ≤3 parallel agents in worktrees       │  │
-  │       │  │    ↓ each agent:                              │  │
-  │       │  │    /idd:tdd → test → rebase → push → close issue    │  │
+  │       │  │    ↓ each agent (SUB-AGENT-PROMPT):              │  │
+  │       │  │    gather → /idd:tdd → commit → rebase →        │  │
+  │       │  │    push → comment → close issue                 │  │
   │       │  │    ↓                                          │  │
   │       │  │  run project test suite (full)                │  │
   │       │  │    ↓                                          │  │
