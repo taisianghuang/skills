@@ -4,6 +4,17 @@ A fork of [mattpocock/skills](https://github.com/mattpocock/skills) extended wit
 
 > Based on [MIT License](./LICENSE). Original work by Matt Pocock.
 
+## Prerequisites
+
+This workflow is built around **GitHub Issues** as the single source of truth for all work items. Every skill in the loop reads from or writes to GitHub Issues:
+
+- PRDs are published as GitHub Issues
+- Child issues (vertical slices) are created under the PRD issue
+- Agent Briefs are posted as issue comments
+- Issues are labelled, triaged, and closed via the `gh` CLI
+
+You will need the [GitHub CLI (`gh`)](https://cli.github.com/) installed and authenticated before using this workflow.
+
 ## Quickstart
 
 ```bash
