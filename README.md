@@ -113,7 +113,7 @@ Skills for daily code work.
 - **[idd:to-issues](./skills/engineering/to-issues/SKILL.md)** — Break a PRD into independently-grabbable vertical slice issues.
 - **[idd:triage](./skills/engineering/triage/SKILL.md)** — Evaluate issues, write Agent Briefs, apply triage labels.
 - **[idd:parallel-issue-runner](./skills/engineering/parallel-issue-runner/SKILL.md)** — Orchestrate parallel sub-agents across git worktrees; loops until the PRD is complete.
-- **[idd:implement-issue](./skills/engineering/implement-issue/SKILL.md)** — Gather the Agent Brief contract and verify acceptance criteria. Used internally by `parallel-issue-runner`.
+- **[idd:implement-issue](./skills/engineering/implement-issue/SKILL.md)** — Manually implement a single issue end-to-end using TDD, following the Agent Brief contract.
 - **[idd:tdd](./skills/engineering/tdd/SKILL.md)** — Red-green-refactor loop. Builds features or fixes bugs one vertical slice at a time.
 - **[idd:diagnose](./skills/engineering/diagnose/SKILL.md)** — Disciplined debug loop: reproduce → minimise → hypothesise → instrument → fix → regression-test.
 - **[idd:improve-codebase-architecture](./skills/engineering/improve-codebase-architecture/SKILL.md)** — Find deepening opportunities informed by `CONTEXT.md` and ADRs. Run every few days.
