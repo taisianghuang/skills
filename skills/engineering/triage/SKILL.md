@@ -104,6 +104,9 @@ If prior triage notes exist on the issue, read them, check whether the reporter 
 
 ## When triage is complete
 
-After all issues in this session are triaged, remind the user of the next step. Include the PRD issue number (if one exists) and the list of issues now marked `ready-for-agent`:
+After all issues in this session are triaged, output this as your final message, substituting the real PRD issue number and the real issue numbers now marked `ready-for-agent`:
 
-> Triage done. Issues ready for agents: #<n1>, #<n2>, ... Run `/clear` to reset the context, then `/parallel-issue-runner #<prd>` (or the specific issue numbers) to kick off parallel agent execution.
+```
+Triage done. Issues ready for agents: #<n1>, #<n2>, ...
+Run `/clear` to reset the context, then `/parallel-issue-runner #<prd>` to kick off parallel agent execution.
+```

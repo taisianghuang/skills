@@ -80,6 +80,9 @@ Or "None - can start immediately" if no blockers.
 
 Do NOT close or modify any parent issue.
 
-When all issues are published, remind the user of the next step. List the issue numbers that were just created so the user can pass them directly to `/triage`:
+When all issues are published, output this as your final message, substituting the real issue numbers that were just created:
 
-> Issues are live: #<n1>, #<n2>, ... Run `/clear` to reset the context, then `/triage #<n1>` (or whichever issue you want to start with) to prioritise and label them.
+```
+Issues are live: #<n1>, #<n2>, ...
+Run `/clear` to reset the context, then `/triage #<n1>` (or whichever issue you want to start with) to prioritise and label them.
+```

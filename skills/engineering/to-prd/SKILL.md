@@ -73,6 +73,8 @@ Any further notes about the feature.
 
 </prd-template>
 
-When the PRD is published, remind the user of the next step in the same session:
+When the PRD is published, output this as your final message:
 
-> PRD is live. Run `/to-issues` to break it into independently-grabbable issues.
+```
+PRD is live. Run `/to-issues` to break it into independently-grabbable issues.
+```
