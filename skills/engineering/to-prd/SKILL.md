@@ -72,3 +72,7 @@ A description of the things that are out of scope for this PRD.
 Any further notes about the feature.
 
 </prd-template>
+
+When the PRD is published, remind the user of the next step in the same session:
+
+> PRD is live. Run `/to-issues` to break it into independently-grabbable issues.

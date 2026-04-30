@@ -69,16 +69,16 @@ Show counts and a one-line summary per issue. Let the maintainer pick.
 4. **Grill (if needed).** If the issue needs fleshing out, run a `/grill-with-docs` session.
 
 5. **Apply the outcome:**
-   - `ready-for-agent` — post an agent brief comment ([AGENT-BRIEF.md](AGENT-BRIEF.md)).
+   - `ready-for-agent` — **always** post an agent brief comment. Do not skip this step even on quick overrides. Follow [AGENT-BRIEF.md](AGENT-BRIEF.md) exactly.
    - `ready-for-human` — same structure as an agent brief, but note why it can't be delegated (judgment calls, external access, design decisions, manual testing).
    - `needs-info` — post triage notes (template below).
    - `wontfix` (bug) — polite explanation, then close.
-   - `wontfix` (enhancement) — write to `.out-of-scope/`, link to it from a comment, then close ([OUT-OF-SCOPE.md](OUT-OF-SCOPE.md)).
+   - `wontfix` (enhancement) — **always** write an entry to `.out-of-scope/` before closing. Follow [OUT-OF-SCOPE.md](OUT-OF-SCOPE.md) exactly, then link to the file from a comment, then close.
    - `needs-triage` — apply the role. Optional comment if there's partial progress.
 
 ## Quick state override
 
-If the maintainer says "move #42 to ready-for-agent", trust them and apply the role directly. Confirm what you're about to do (role changes, comment, close), then act. Skip grilling. If moving to `ready-for-agent` without a grilling session, ask whether they want to write an agent brief.
+If the maintainer says "move #42 to ready-for-agent", trust them and apply the role directly. Confirm what you're about to do (role changes, comment, close), then act. Skip grilling. **Always write an agent brief even on quick overrides** — ask for any missing context needed to complete it.
 
 ## Needs-info template
 
@@ -101,3 +101,9 @@ Capture everything resolved during grilling under "established so far" so the wo
 ## Resuming a previous session
 
 If prior triage notes exist on the issue, read them, check whether the reporter has answered any outstanding questions, and present an updated picture before continuing. Don't re-ask resolved questions.
+
+## When triage is complete
+
+After all issues in this session are triaged, remind the user of the next step. Include the PRD issue number (if one exists) and the list of issues now marked `ready-for-agent`:
+
+> Triage done. Issues ready for agents: #<n1>, #<n2>, ... Run `/clear` to reset the context, then `/parallel-issue-runner #<prd>` (or the specific issue numbers) to kick off parallel agent execution.

@@ -119,3 +119,7 @@ For "other" issue trackers, write `docs/agents/issue-tracker.md` from scratch us
 ### 5. Done
 
 Tell the user the setup is complete and which engineering skills will now read from these files. Mention they can edit `docs/agents/*.md` directly later — re-running this skill is only necessary if they want to switch issue trackers or restart from scratch.
+
+Remind the user that a good next step is to clear the current context and start a grilling session:
+
+> Next step: run `/clear` to reset the context, then `/grill-with-docs` (if you're kicking off a code change) or `/grill-me` (for any other plan or idea).
