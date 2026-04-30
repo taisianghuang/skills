@@ -1,7 +1,7 @@
 You are implementing GitHub issue #{number}: {title}.
 This is a child of PRD #{prd_number}.
 
-Use the /implement-issue skill to complete the implementation and tests.
+Use the /idd:implement-issue skill to complete the implementation and tests.
 Branch off {base_branch}: implementer/issue-{number}-{slug}
 Merge target: {base_branch} (origin/{base_branch})
 

@@ -17,7 +17,7 @@ Assumes `to-prd → to-issues → triage` are already done. Child issues exist w
 ## Quick Start
 
 ```
-/parallel-issue-runner #<prd-issue-number>
+/idd:parallel-issue-runner #<prd-issue-number>
 ```
 
 **If no PRD number is provided**, ask before doing anything else:
@@ -153,9 +153,9 @@ After closing the PRD, output this as your final message, substituting the real 
 ```
 PRD #<prd_number> is closed. Run `/clear` to reset the context, then paste this to do a final alignment check:
 
-/grill-with-docs Verify that PRD #<prd_number> has been fully implemented: read the merged code on <base_branch>, cross-check it against CONTEXT.md and the ADRs in docs/adr/ to confirm every acceptance criterion is met, every touched file aligns with the domain model, and no domain concepts were misused.
+/idd:grill-with-docs Verify that PRD #<prd_number> has been fully implemented: read the merged code on <base_branch>, cross-check it against CONTEXT.md and the ADRs in docs/adr/ to confirm every acceptance criterion is met, every touched file aligns with the domain model, and no domain concepts were misused.
 
-If everything looks good — well done! Start your next feature with `/grill-with-docs <your next idea>` and the cycle begins again.
+If everything looks good — well done! Start your next feature with `/idd:grill-with-docs <your next idea>` and the cycle begins again.
 ```
 
 ## Loop Diagram
@@ -197,7 +197,7 @@ LOOP ↑
 [ ] File conflict check done against ready set and existing branches
 [ ] Max 3 agents launched in parallel per batch
 [ ] Each agent uses its own git worktree (isolation: "worktree")
-[ ] Each agent prompt references /implement-issue skill and PRD number
+[ ] Each agent prompt references /idd:implement-issue skill and PRD number
 [ ] Each agent self-merges with push retry loop (max 3 attempts)
 [ ] Each agent comments commit SHA on its issue and closes it
 [ ] PUSH_FAILED signals handled by orchestrator

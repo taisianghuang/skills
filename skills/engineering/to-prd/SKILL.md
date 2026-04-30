@@ -5,7 +5,7 @@ description: Turn the current conversation context into a PRD and publish it to 
 
 This skill takes the current conversation context and codebase understanding and produces a PRD. Do NOT interview the user — just synthesize what you already know.
 
-The issue tracker and triage label vocabulary should have been provided to you — run `/setup-matt-pocock-skills` if not.
+The issue tracker and triage label vocabulary should have been provided to you — run `/idd:setup-matt-pocock-skills` if not.
 
 ## Process
 
@@ -76,5 +76,5 @@ Any further notes about the feature.
 When the PRD is published, output this as your final message:
 
 ```
-PRD is live. Run `/to-issues` to break it into independently-grabbable issues.
+PRD is live. Run `/idd:to-issues` to break it into independently-grabbable issues.
 ```

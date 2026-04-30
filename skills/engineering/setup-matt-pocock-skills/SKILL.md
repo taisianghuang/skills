@@ -122,4 +122,4 @@ Tell the user the setup is complete and which engineering skills will now read f
 
 Remind the user that a good next step is to clear the current context and start a grilling session:
 
-> Next step: run `/clear` to reset the context, then `/grill-with-docs` (if you're kicking off a code change) or `/grill-me` (for any other plan or idea).
+> Next step: run `/clear` to reset the context, then `/idd:grill-with-docs` (if you're kicking off a code change) or `/idd:grill-me` (for any other plan or idea).

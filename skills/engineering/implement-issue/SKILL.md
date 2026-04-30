@@ -21,7 +21,7 @@ When the user says "Implement issue #42" or asks you to take ownership of an iss
 
 ### 2. Test-Driven Implementation
 
-- Use the `/tdd` skill to drive the implementation.
+- Use the `/idd:tdd` skill to drive the implementation.
 - First, write failing tests against the interfaces specified in the brief. Ensure you are testing behaviors at the boundaries (e.g. Services, Ports), not internal implementation details.
 - Run the tests to see them fail.
 - Implement the requested features until all tests pass.

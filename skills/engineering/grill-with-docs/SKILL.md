@@ -85,5 +85,5 @@ If any of the three is missing, skip the ADR. Use the format in [ADR-FORMAT.md](
 When the grilling session is complete and the user is satisfied with the shared understanding, output this as your final message:
 
 ```
-Ready to move forward? Run `/to-prd` to turn this into a PRD.
+Ready to move forward? Run `/idd:to-prd` to turn this into a PRD.
 ```
