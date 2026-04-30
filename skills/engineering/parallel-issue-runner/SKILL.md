@@ -172,7 +172,7 @@ Launch ≤3 parallel agents (implement-issue in worktrees)
   ├─ PUSH_FAILED? → Orchestrator investigates manually
   └─ COMPLETE? → continue
   ↓
-hatch run check
+run project test suite
   ↓
 LOOP ↑
 ```
