@@ -11,7 +11,7 @@ After all tests pass, merge your branch to {base_branch} with a retry loop (max 
   while attempt < 3:
     git fetch origin
     git rebase origin/{base_branch}        # always clean — conflict detection was done upfront
-    git push origin {branch}
+    git push origin {branch}:{base_branch}
     if push succeeds:
       break
     attempt += 1
