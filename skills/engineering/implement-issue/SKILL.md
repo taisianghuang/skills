@@ -31,15 +31,4 @@ When the user says "Implement issue #42" or asks you to take ownership of an iss
 - Before committing, double-check that every single item in the Agent Brief's "Acceptance criteria" list is fully satisfied.
 - Run all project tests and linters to ensure nothing else was broken.
 
-### 4. Commit & Push
-
-- Stage all your changes.
-- Create a conventional commit message describing what was done (e.g., `feat: implement user registration (#42)`).
-- Ensure you include `Resolves #<issue-number>` or `Closes #<issue-number>` in the commit message body to automatically link the issue.
-- Push the changes to the current working branch.
-
-### 5. Report & Close
-
-- Use the issue tracker CLI to add a comment on the issue.
-- Provide a concise summary of the changes made.
-- Close the issue.
+Stop here. The caller (e.g. `parallel-issue-runner`) is responsible for committing, pushing, commenting, and closing the issue.

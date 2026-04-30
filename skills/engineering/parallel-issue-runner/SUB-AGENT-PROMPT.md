@@ -1,13 +1,24 @@
 You are implementing GitHub issue #{number}: {title}.
 This is a child of PRD #{prd_number}.
 
-Use the /idd:implement-issue skill to complete the implementation and tests.
+Use the /idd:implement-issue skill to complete the implementation and tests (Steps 1–3 only: gather contract, TDD, verify acceptance criteria). Do NOT commit or push inside that skill — this prompt owns everything from commit onward.
+
 Branch off {base_branch}: implementer/issue-{number}-{slug}
 Merge target: {base_branch} (origin/{base_branch})
 
 Do NOT create a pull request. Merge directly to {base_branch} by pushing with the refspec below.
 
-After all tests pass, merge your branch to {base_branch} with a retry loop (max 3 attempts):
+After all tests pass:
+
+1. Commit:
+   ```bash
+   git add -A
+   git commit -m "<type>: <description> (##{number})
+
+   Closes #{number}"
+   ```
+
+2. Merge to {base_branch} with a retry loop (max 3 attempts):
 
   attempt=0
   while attempt < 3:
@@ -35,9 +46,8 @@ If merge succeeds:
    ```
 4. Close the issue:
    `gh issue close {number}`
-5. Delete the feature branch:
+5. Delete the remote feature branch:
    ```bash
    git push origin --delete implementer/issue-{number}-{slug}
-   git branch -d implementer/issue-{number}-{slug}
    ```
 6. Output `<promise>COMPLETE #{number}</promise>`
