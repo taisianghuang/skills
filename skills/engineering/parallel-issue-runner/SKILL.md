@@ -129,7 +129,14 @@ For each agent signal received:
   ```
   Decide whether to retry, rebase manually, or defer the issue.
 
-After all agents in the batch complete (or fail), verify the full test suite using the project's test command (e.g. `npm test`, `pytest`, `cargo test` — whatever the project uses).
+After all agents in the batch complete (or fail):
+
+1. Clean up stale worktrees:
+   ```bash
+   git worktree prune
+   ```
+
+2. Verify the full test suite using the project's test command (e.g. `npm test`, `pytest`, `cargo test` — whatever the project uses).
 
 **LOOP** back to Step 1.
 
