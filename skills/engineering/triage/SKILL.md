@@ -47,6 +47,7 @@ The maintainer invokes `/triage` and describes what they want in natural languag
 - "Let's look at #42"
 - "Move #42 to ready-for-agent"
 - "What's ready for agents to pick up?"
+- `/idd:triage #42 #43 #44` — triage multiple issues in sequence, one at a time
 
 ## Show what needs attention
 

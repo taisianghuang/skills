@@ -84,5 +84,6 @@ When all issues are published, output this as your final message, substituting t
 
 ```
 Issues are live: #<n1>, #<n2>, ...
-Run `/clear` to reset the context, then `/idd:triage #<n1>` (or whichever issue you want to start with) to prioritise and label them.
+Run `/clear` to reset the context, then triage all of them in one go:
+`/idd:triage #<n1> #<n2> ...`
 ```
