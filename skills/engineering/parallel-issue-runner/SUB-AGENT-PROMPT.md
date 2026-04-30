@@ -5,6 +5,8 @@ Use the /idd:implement-issue skill to complete the implementation and tests.
 Branch off {base_branch}: implementer/issue-{number}-{slug}
 Merge target: {base_branch} (origin/{base_branch})
 
+Do NOT create a pull request. Merge directly to {base_branch} by pushing with the refspec below.
+
 After all tests pass, merge your branch to {base_branch} with a retry loop (max 3 attempts):
 
   attempt=0
