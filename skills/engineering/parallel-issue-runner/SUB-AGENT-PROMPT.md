@@ -29,21 +29,17 @@ git commit -m "<type>: <description> (#{number})
 Closes #{number}"
 ```
 
-## Step 5 — Merge to {base_branch} (retry loop, max 3 attempts)
+## Step 5 — Merge to {base_branch}
 
-```
-attempt=0
-while attempt < 3:
-  git fetch origin
-  git rebase origin/{base_branch}        # always clean — conflict detection was done upfront
-  git push origin {branch}:{base_branch}
-  if push succeeds:
-    break
-  attempt += 1
+Use your judgment to complete the merge safely:
 
-if attempt == 3 and push still fails:
-  Output <promise>PUSH_FAILED #{number}: {reason}</promise> and stop.
+```bash
+git fetch origin
+git rebase origin/{base_branch}        # should be clean — conflict detection was done upfront
+git push origin {branch}:{base_branch}
 ```
+
+If push fails, investigate the reason and decide whether a retry is appropriate. If you cannot proceed safely, output `<promise>PUSH_FAILED #{number}: {reason}</promise>` and stop.
 
 ## Step 6 — Report & Close
 
