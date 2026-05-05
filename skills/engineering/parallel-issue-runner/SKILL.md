@@ -21,7 +21,7 @@ If no PRD number is provided, ask first and do not proceed:
 
 - Orchestrator runs on `{base_branch}`.
 - Sub-agents branch from `{base_branch}` to `implementer/issue-{number}-{slug}`.
-- Sub-agents always merge back into `{base_branch}`.
+- Sub-agents merge `implementer/issue-{number}-{slug}` back into `{base_branch}`.
 
 ## Workflow
 
@@ -52,12 +52,12 @@ Use these exact settings when launching parallel workers:
 
 ```
 [ ] Open child issues fetched via gh issue list --search "#{prd_number}"
-[ ] Blocker state verified (including merged PR check)
+[ ] Blockers verified using commit evidence on `{base_branch}`, not only issue closed state
 [ ] File conflict check done against ready set and existing branches
 [ ] Max 3 agents launched in parallel per batch
 [ ] Each agent uses its own git worktree (isolation: "worktree")
 [ ] Each agent prompt references /idd:implement-issue skill and PRD number
-[ ] Each agent self-merges or reports a push failure when it cannot proceed safely
+[ ] Each agent merges `implementer/issue-{number}-{slug}` into `{base_branch}` or reports a push failure when it cannot proceed safely
 [ ] Each agent comments commit SHA on its issue and closes it
 [ ] PUSH_FAILED signals handled by orchestrator
 [ ] Loop continues until all child issues closed

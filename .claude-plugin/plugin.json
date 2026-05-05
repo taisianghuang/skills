@@ -14,6 +14,7 @@
     "./skills/engineering/zoom-out",
     "./skills/productivity/caveman",
     "./skills/productivity/grill-me",
+    "./skills/productivity/help",
     "./skills/productivity/write-a-skill"
   ]
 }

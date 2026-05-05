@@ -47,14 +47,20 @@ Parse each open issue body for:
 For each blocker:
 
 ```bash
-gh issue view {blocker_number} --json state,number
-# Edge case: blocker open but PR merged
-gh pr list --state merged --search "Closes #{blocker_number}"
+gh issue view {blocker_number} --json state,number,title
+# Find issue comments that mention the implementation commit SHA
+gh issue view {blocker_number} --comments
+# Verify the referenced commit is reachable from the base branch
+git fetch origin
+git branch -r --contains {commit_sha} | grep "origin/{base_branch}"
 ```
 
 Ready rule:
 
-- Issue is ready only when all blockers are closed or covered by merged PR.
+- Issue is ready only when every blocker has commit evidence already on `{base_branch}`.
+- `CLOSED` status alone is not sufficient.
+- Acceptable evidence is a commit SHA linked from the blocker issue that is contained in `origin/{base_branch}`.
+- If a blocker is `CLOSED` but no such commit evidence is found, treat it as unresolved and report it explicitly.
 
 Sets:
 
@@ -99,6 +105,7 @@ For each issue in conflict-free ready set (max 3 per batch), launch Agent tool w
 - `prompt`: from `SUB-AGENT-PROMPT.md` with `{number}`, `{title}`, `{prd_number}`, `{slug}`, `{base_branch}`
 
 Send all launches in one message to ensure real parallelism.
+Each sub-agent works on `implementer/issue-{number}-{slug}` and merges that branch into `{base_branch}`.
 
 If more than 3 are ready, process lowest-numbered 3 first and continue in next loop.
 
@@ -157,5 +164,6 @@ If everything looks good — well done! Start your next feature with `/idd:grill
 |-----------|--------|
 | Agent fails | Leave branch, report failure, continue others, re-queue next cycle |
 | All ready issues conflict | Run sequentially, lowest issue number first |
-| Blocker open but PR merged | Treat as resolved |
+| Blocker open but commit already on `{base_branch}` | Treat as resolved |
+| Blocker closed but no commit evidence on `{base_branch}` | Treat as unresolved and report manual closure risk |
 | PRD has no acceptance criteria | Warn user and ask confirmation before closing |

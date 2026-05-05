@@ -3,7 +3,7 @@ This is a child of PRD #{prd_number}.
 
 Branch off {base_branch}: implementer/issue-{number}-{slug}
 Merge target: {base_branch} (origin/{base_branch})
-Do NOT create a pull request. Merge directly to {base_branch} by pushing with the refspec below.
+Do NOT create a pull request. Merge `implementer/issue-{number}-{slug}` into {base_branch} by pushing with the refspec below.
 
 ## Step 1 — Gather the Contract
 
@@ -31,7 +31,7 @@ Closes #{number}"
 
 ## Step 5 — Merge to {base_branch}
 
-Use your judgment to complete the merge safely:
+Use your judgment to merge `implementer/issue-{number}-{slug}` into `{base_branch}` safely:
 
 ```bash
 git fetch origin

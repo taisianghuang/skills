@@ -126,6 +126,7 @@ General workflow tools, not code-specific.
 
 - **[idd:grill-me](./skills/productivity/grill-me/SKILL.md)** — Get relentlessly interviewed about a plan or design until every branch is resolved.
 - **[idd:caveman](./skills/productivity/caveman/SKILL.md)** — Ultra-compressed communication mode. Cuts token usage ~75%.
+- **[idd:help](./skills/productivity/help/SKILL.md)** — Explain the idd workflow, route to the next skill, and clarify session boundaries.
 - **[idd:write-a-skill](./skills/productivity/write-a-skill/SKILL.md)** — Create new skills with proper structure and bundled resources.
 
 ### Misc
