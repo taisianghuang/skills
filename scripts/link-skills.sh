@@ -26,7 +26,7 @@ mkdir -p "$DEST"
 find "$REPO/skills" -name SKILL.md -not -path '*/node_modules/*' -print0 |
 while IFS= read -r -d '' skill_md; do
   src="$(dirname "$skill_md")"
-  name="$(basename "$src")"
+  name="idd:$(basename "$src")"
   target="$DEST/$name"
 
   if [ -e "$target" ] && [ ! -L "$target" ]; then
