@@ -1,5 +1,5 @@
 ---
-name: parallel-issue-runner
+name: idd:parallel-issue-runner
 description: Given a PRD issue number, find its already-triaged child issues, verify blockers are resolved and no file conflicts exist, then launch parallel sub-agents in git worktrees using implement-issue. Loops until all child issues are closed and the PRD is complete. Assumes to-prd, to-issues, and triage have already been run. Use when user says "run prd #N", "parallel implement", "execute issues for prd", or wants autonomous parallel issue execution.
 argument-hint: "#<prd-issue-number>"
 ---

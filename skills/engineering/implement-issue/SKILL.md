@@ -1,5 +1,5 @@
 ---
-name: implement-issue
+name: idd:implement-issue
 description: Implement a GitHub issue end-to-end using TDD, following the Agent Brief contract. Use when user wants the agent to pick up a ticket, write code to fulfill its acceptance criteria, commit, push, and close the issue.
 ---
 
