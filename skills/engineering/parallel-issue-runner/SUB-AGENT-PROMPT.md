@@ -15,9 +15,13 @@ Do NOT create a pull request. Merge `implementer/issue-{number}-{slug}` into {ba
 
 Use the `/idd:tdd` skill to drive the implementation. Test behaviors at the boundaries defined in the Agent Brief, not internal implementation details.
 
+
 ## Step 3 — Verify Acceptance Criteria
 
 - Double-check every item in the Agent Brief's "Acceptance criteria" list is fully satisfied.
+- **Automatically search for and parse the project's CI configuration files and common project config files.**
+- **Determine all required validation steps (tests, linters, type checks, coverage) from these files.**
+- **Execute all commands locally that are required by CI to ensure your changes will pass in CI.**
 - Run all project tests and linters to confirm nothing else was broken.
 
 ## Step 4 — Commit
