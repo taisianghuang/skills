@@ -3,6 +3,7 @@
   "skills": [
     "./skills/engineering/diagnose",
     "./skills/engineering/grill-with-docs",
+    "./skills/engineering/prototype",
     "./skills/engineering/implement-issue",
     "./skills/engineering/triage",
     "./skills/engineering/improve-codebase-architecture",
@@ -15,6 +16,8 @@
     "./skills/productivity/caveman",
     "./skills/productivity/grill-me",
     "./skills/productivity/help",
-    "./skills/productivity/write-a-skill"
+    "./skills/productivity/write-a-skill",
+    "./skills/productivity/teach",
+    "./skills/productivity/handoff"
   ]
 }

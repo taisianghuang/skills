@@ -110,6 +110,7 @@ Skills for daily code work.
 
 - **[idd:setup-matt-pocock-skills](./skills/engineering/setup-matt-pocock-skills/SKILL.md)** — Configure issue tracker, triage labels, and domain docs. Run once per repo.
 - **[idd:grill-with-docs](./skills/engineering/grill-with-docs/SKILL.md)** — Align on requirements, sharpen domain language, update `CONTEXT.md` and ADRs inline.
+- **[idd:prototype](./skills/engineering/prototype/SKILL.md)** — Build a throwaway prototype to flesh out a design before committing — a runnable terminal app for state/logic questions, or toggleable UI variations.
 - **[idd:to-prd](./skills/engineering/to-prd/SKILL.md)** — Synthesise the session into a PRD and publish to the issue tracker.
 - **[idd:to-issues](./skills/engineering/to-issues/SKILL.md)** — Break a PRD into independently-grabbable vertical slice issues.
 - **[idd:triage](./skills/engineering/triage/SKILL.md)** — Evaluate issues, write Agent Briefs, apply triage labels.
@@ -128,6 +129,8 @@ General workflow tools, not code-specific.
 - **[idd:caveman](./skills/productivity/caveman/SKILL.md)** — Ultra-compressed communication mode. Cuts token usage ~75%.
 - **[idd:help](./skills/productivity/help/SKILL.md)** — Explain the idd workflow, route to the next skill, and clarify session boundaries.
 - **[idd:write-a-skill](./skills/productivity/write-a-skill/SKILL.md)** — Create new skills with proper structure and bundled resources.
+- **[idd:teach](./skills/productivity/teach/SKILL.md)** — Teach a new skill or concept across multiple sessions, keeping a glossary and learning record in the workspace.
+- **[idd:handoff](./skills/productivity/handoff/SKILL.md)** — Compact the current conversation into a handoff document so a fresh agent can pick up the work.
 
 ### Misc
 
